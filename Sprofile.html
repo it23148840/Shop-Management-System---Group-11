@@ -10,6 +10,7 @@
     <header>
         <nav>
             <ul class="tabs">
+                <li class="store-name">Channa Stores</li>
                 <li><a href="inventory.html" class="tab">Inventory</a></li>
                 <li><a href="Sprofile.html" class="tab active">Profile</a></li>                
                 <li class="signout-tab"><a href="login.html" class="tab">Sign Out</a></li>
@@ -22,16 +23,16 @@
         <!-- Update Profile Form -->
         <form id="update-profile-form">
             <label for="name">Name:</label>
-            <input type="text" id="name" value="John Doe"><br><br>
+            <input type="text" id="name" value="John Doe" required><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" value="john@example.com"><br><br>
+            <input type="email" id="email" value="john@example.com" required><br><br>
+
 
             <label for="phone">Phone:</label>
             <input type="text" id="phone" value="123-456-7890"><br><br>
 
-            <label for="age">Age:</label>
-            <input type="number" id="age" value="30" min="0"><br><br> <!-- Restrict negative values -->
+
 
             <button type="submit">Update Profile</button>
         </form>
@@ -66,15 +67,15 @@
     </footer>
 
     <script>
-        // Update Profile Handler
+          // Update Profile Handler
         document.getElementById('update-profile-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
-            const age = document.getElementById('age').value;
 
-            alert(`Profile updated successfully!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAge: ${age}`);
+
+            alert(Profile updated successfully!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone});
             // Logic to save updated profile (backend integration)
         });
 
@@ -100,9 +101,11 @@
             if (confirmation) {
                 alert('Account deleted successfully!');
                 // Logic to delete the account (backend integration)
-                window.location.href = 'login.html'; // Redirect to homepage after deletion
+                window.location.href = 'login.html'; // Redirect to login page after account deletion
             }
         });
+    
     </script>
 </body>
 </html>
+
